@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'guestbook',
 ]
 
 MIDDLEWARE = [
@@ -81,7 +82,14 @@ WSGI_APPLICATION = 'helloworld.wsgi.application'
 # }
 import dj_database_url
 DATABASES = {
-    'default': dj_database_url.config(),
+     'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'djangohw',
+        'USER': 'postgres',
+        'PASSWORD': 'havefaith5!',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
 }
 
 
